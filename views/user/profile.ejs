@@ -1,0 +1,21 @@
+<% include ../partials/header %>
+
+<h4><%= user.username %></h4>
+<h4><%= user.displayName %></h4>
+<h4><%= user.birthDay.toDateString() %></h4>
+<img src="<%=user.profileImage%>">
+
+
+<div class="media">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" src="<%=user.profileImage%>">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"><%=user.username%></h4>
+  </div>
+</div>
+
+
+<% include ../partials/footer %>

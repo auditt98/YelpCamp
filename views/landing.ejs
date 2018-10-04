@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>YelpCamp</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,900&amp;subset=vietnamese" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheet/landing.css">
+</head>
+<body>
+    <div class="container">
+        <h1>YelpCamp</h1>
+        <a href="/campgrounds"><button class="button" ><i class="fas fa-arrow-right"></i></button></a>
+    </div>
+    <button class="theme"><i class="fab fa-free-code-camp"></i></button>
+
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementsByClassName("theme")[0].addEventListener("click", function(){
+            document.getElementsByClassName("theme")[0].classList.toggle("button-light");
+            document.getElementsByTagName("body")[0].classList.toggle("body-light");
+            document.getElementsByClassName("button")[0].classList.toggle("button-light");
+        });
+        
+    </script>
+<% include partials/footer %>
+
+<!--AIzaSyAwQKq4vyh5DH_fOK1OZ1jfsYwPeowHvJk-->

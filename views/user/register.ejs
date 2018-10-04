@@ -1,0 +1,35 @@
+<% include ../partials/header %>
+
+<div class ="container">
+    <h1 style="text-align: center;">Create a new user</h1>
+    <div style="width: 30%; margin: 30px auto;">
+        <form method="POST" action="/register">
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder ="Username" name="username" required>          
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="password" placeholder ="Password" name="password" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder ="Display Name" name="displayName" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder ="Profile's Image URL" name="profileImage" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="Date" placeholder ="Birthday" name="birthDay">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-lg btn-default btn-block btn-success">Create new user</button>
+            </div>
+        </form>
+        <a href="/campgrounds">Go back</a>
+    </div>
+    
+</div>
+
+
+
+
+
+<% include ../partials/footer %>

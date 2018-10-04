@@ -1,0 +1,71 @@
+
+body {
+    text-align: center;
+    background-color: #000a12;
+    background: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95)), url(https://images.unsplash.com/photo-1508873696983-2dfd5898f08b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5cedc6b95f731395da7269d2341f9a5e&auto=format&fit=crop&w=1050&q=80) no-repeat center center fixed;
+    background-size: cover;
+}
+.body-light{
+    text-align: center;
+    background: none;
+    background-color: white;
+    background-size: cover;
+    transition: all .5s;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10vw;
+    color: #f35626;
+    background-image: -webkit-linear-gradient(180deg,#12c2e9, #c471ed,#f64f59,#c471ed,#12c2e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: shine 1s infinite linear;
+    animation: shine 30s infinite linear;
+    background-size: 200% auto;
+}
+.container{
+    padding-top: 15%;
+}
+
+.button{
+    font-size: 40px;
+    color: white;
+    background-color: transparent;
+    outline: none;
+    margin-top:60px;
+    height:90px;
+    width:90px;
+    border: none;
+    transition: all .5s;
+}
+.theme{
+    position: fixed;
+    font-size: 40px;
+    bottom: 10px;
+    right: 10px;
+    height:45px;
+    width: 45px;
+    background-color: transparent;
+    color:white;
+    border: none;
+    outline:none;
+    transition: all .5s;
+}
+
+.button-light{
+    color: black;
+    transition: all .5s;
+}
+
+.button:hover{
+    color: #00e676;
+    transform: scale(1.5);
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
