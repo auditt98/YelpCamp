@@ -14,7 +14,7 @@ Added:
 
 - Add admin roles
 - Add API call
-- Add fuzzy search based on API call
+- Add fuzzy search based on API call and RegEx
 - Add background slides for dark theme
 - Add helpfulness of comments
 - Add camp ratings
