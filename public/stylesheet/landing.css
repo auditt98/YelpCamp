@@ -63,7 +63,6 @@ h1 {
     color: #00e676;
     transform: scale(1.5);
 }
-
 @keyframes shine {
   to {
     background-position: 200% center;

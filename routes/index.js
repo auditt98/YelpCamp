@@ -29,7 +29,8 @@ router.post("/register",function(req, res) {
     });
 });
 
-//LOGIN
+//LOGI
+
 router.get("/login",function(req, res) {
     res.render("user/login");
 });

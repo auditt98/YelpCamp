@@ -23,3 +23,4 @@ Added:
 - Add ads (for testing purposes)
 - Migrate to Bootstrap 4
 - Implement React (On alpha branch)
+- Add links to navbar and add responsive hamburger

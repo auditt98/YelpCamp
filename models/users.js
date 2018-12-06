@@ -6,7 +6,9 @@ var userSchema = mongoose.Schema({
     password: String,
     displayName: String,
     profileImage: String,
-    birthDay: Date
+    birthDay: Date,
+    facebookId: Number,
+    googleId: Number
 });
 userSchema.plugin(passportLocalMongoose);
 var User = mongoose.model("User",userSchema);

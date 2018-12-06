@@ -1,5 +1,9 @@
 <% include ../partials/header %>
 <% var currentTime = new Date().getTime(); %>
+<% var apiKey = "AIzaSyCg59ooupK9tmtxtODdaoLVrbrGz3m3bVE" %>
+<% var locat = (encodeURI(camp.location)) %>;
+<% var reqUrl = "https://www.google.com/maps/embed/v1/directions?key=" + apiKey + "&q=" + locat %>
+<% console.log(reqUrl) %>
 <div class="container">
     <div class="row">
         <div class="col-md-3">
@@ -8,18 +12,10 @@
                 <li class="list-group-item active">Categories 1</li>
                 <li class="list-group-item">Categories 2</li>
                 <li class="list-group-item">Categories 3</li>
+                <div id="map">
+                    <iframe height="300" width="262.5" frameborder="0" style="border:0" src="<%=reqUrl%>"></iframe>
+                </div>
             </div>
-            <div id="map"></div>
-            <script>
-                function initMap() {
-                  var location = {lat: <%=camp.location.lat%>, lng: <%=camp.location.lng%>};
-                  // The map, centered at camp.location
-                  var map = new google.maps.Map(
-                      document.getElementById('map'), {zoom: 13, center: location});
-                  // The marker, positioned at camp.location
-                  var marker = new google.maps.Marker({position: location, map: map});
-                }
-            </script>
         </div>
         <div class="col-md-9">
             <div class="thumbnail">
@@ -78,7 +74,5 @@
         </div>
     </div>
 </div>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuOusq2OC2EVi9aflSegSLTO4JPDMKOxM&callback=initMap"></script>
-    
     
 <% include ../partials/footer %>

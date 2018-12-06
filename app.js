@@ -11,8 +11,8 @@ var express                 = require("express"),
     Campground              = require("./models/campgrounds.js"),
     Comments                = require("./models/comments.js"),
     flash                   = require("connect-flash"),
-    methodOverride          = require("method-override");
-
+    methodOverride          = require("method-override"),
+    request                 = require("request");
 
 //DECLARING ROUTES
 var commentRoutes = require("./routes/comments.js");
@@ -20,7 +20,8 @@ var campgroundRoutes = require("./routes/campgrounds.js");
 var indexRoutes = require("./routes/index.js");
 
 //CONFIGURING APP
-mongoose.connect(process.env.DATABASEURL);
+
+mongoose.connect("mongodb://localhost/YelpCamp");
 app.use(methodOverride("_method"));
 app.use(express.static(__dirname + "/public"));
 app.set("view engine","ejs");
@@ -43,14 +44,11 @@ app.use(function(req,res,next){
     res.locals.info = req.flash("info");
     next();
 });
-console.log(process.env.DATABASEURL);
+
 //ROUTER
 app.use(indexRoutes);
 app.use("/campgrounds",campgroundRoutes);
 app.use("/campgrounds/:id/comments",commentRoutes);
-app.get("/maps",function (req,res) {
-    res.render("map");
-});
 
 
 //STARTING SERVER

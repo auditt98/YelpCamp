@@ -18,10 +18,7 @@ var campgroundSchema = new mongoose.Schema({
             ref: "Comments"
         }    
     ],
-    location:{
-        lat: Number,
-        lng: Number
-    }
+    location: String
 });
 
 var Campground = mongoose.model("Campground",campgroundSchema);
